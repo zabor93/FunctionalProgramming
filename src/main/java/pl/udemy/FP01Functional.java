@@ -19,5 +19,4 @@ public class FP01Functional {
         numbers.stream()
                 .filter(FP01Functional::isEven)
                 .forEach(System.out::println);
-        }
-}
+        }}
