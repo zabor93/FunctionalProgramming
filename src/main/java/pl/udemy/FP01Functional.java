@@ -11,7 +11,9 @@ public class FP01Functional {
 //        printAllEvenNumbersInListFunctional(List.of(12,12,44,322,1,2,333,78));
         printAllCourses(List.of("Spring","Spring boot","API","Microservices","AWS","PCF","Azure","Docker"));
 
-        printAllCoursesContaining4chars(List.of("Spring","Spring boot","API","Microservices","AWS","PCF","Azure","Docker"));
+        List<String> courses = List.of("Spring", "Spring boot", "API", "Microservices", "AWS", "PCF", "Azure", "Docker");
+//        printAllCoursesContaining4chars(courses);
+        printlengthOFCourseContaining4chars(courses);
     }
 
     private static boolean isEven(Integer k) {
@@ -43,6 +45,18 @@ public class FP01Functional {
     private static void printAllCoursesContaining4chars(List<String> courses) {
         courses.stream()
                 .filter(course->course.length()>4)
+                .forEach(System.out::println);
+    }
+
+    private static void printSquareEvenNumbersInListFunctional(List<Integer> numbers) {
+        numbers.stream()
+                .filter(number->number%2==0)
+                .map(number->number*number)
+                .forEach(System.out::println);
+    }
+    private static void printlengthOFCourseContaining4chars(List<String> courses) {
+        courses.stream()
+                .map(course->course +" "+course.length())
                 .forEach(System.out::println);
     }
 
