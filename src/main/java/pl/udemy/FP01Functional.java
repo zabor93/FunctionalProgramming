@@ -9,6 +9,8 @@ public class FP01Functional {
 
 //        printAllNumbersInListFunctional(List.of(12, 9, 4, 64, 32));
 //        printAllEvenNumbersInListFunctional(List.of(12,12,44,322,1,2,333,78));
+        printAllCourses(List.of("Spring","Spring boot","API","Microservices","AWS","PCF","Azure","Docker"));
+
         printAllCoursesContaining4chars(List.of("Spring","Spring boot","API","Microservices","AWS","PCF","Azure","Docker"));
     }
 
